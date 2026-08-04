@@ -14,14 +14,14 @@ const IncomeExpense = () => {
       .filter((item) => item < 0)
       .reduce((prevAmount, item) => (prevAmount += item), 0) * -(1).toFixed(2);
   return (
-    <div className="flex mt-3 gap-20 uppercase font-bold text-2xl  bg-white p-2 shadow rounded  max-w-md justify-center ">
+    <div className="flex mt-3 flex-1 justify-around uppercase font-bold text-2xl  bg-white p-2 shadow rounded w-full  max-w-md  ">
       <div>
-        <h2>income</h2>
-        <p className="text-green-500 font-bold font-mono text-3xl">${income}</p>
+        <h2 className="text-sm font-bold uppercase sm:text-base">income</h2>
+        <p className="text-green-500 font-bold font-mono text-xl">${income}</p>
       </div>
       <div>
-        <h2>expense</h2>
-        <p className="text-red-500 font-bold font-mono text-3xl">${expense}</p>
+        <h2 className="text-sm font-bold uppercase sm:text-base">expense</h2>
+        <p className="text-red-500 font-bold font-mono text-2xl">${expense}</p>
       </div>
     </div>
   );
